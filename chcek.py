@@ -30,5 +30,5 @@ async def start_sending_checks(client: Client, message: Message):
             break
     await message.reply("✅ Finished test sending!", quote=True)
 
-if name == "main":
+if __name__ == "__main__":
     app.run()
