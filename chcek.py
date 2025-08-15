@@ -20,7 +20,7 @@ app = Client(
 @app.on_message(filters.command("start") & filters.user(OWNER_ID))
 async def start_sending_checks(client: Client, message: Message):
     await message.reply("✅ Starting test messages...", quote=True)
-    for i in range(1, 6):
+    for i in range(1, 4500):
         text_msg = f"/check {i}"
         try:
             await client.send_message(TARGET_CHAT_ID, text_msg)
